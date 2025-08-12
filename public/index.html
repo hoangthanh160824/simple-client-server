@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 01 - Client-Server Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Client-Server Lab 01</h1>
+            <p>Simple HTTP Server with Static Content</p>
+        </header>
+
+        <main>
+            <section class="server-info">
+                <h2>Server Information</h2>
+                <button id="fetchInfo" class="btn">Get Server Info</button>
+                <div id="serverData" class="data-display"></div>
+            </section>
+
+            <section class="name-info">
+                <h2>Thông tin sinh viên</h2>
+                <button id="fetchName" class="btn">Hiển thị tên</button>
+                <div id="nameData" class="data-display"></div>
+            </section>
+
+            <section class="ajax-demo">
+                <h2>AJAX Demo</h2>
+                <div class="form-group">
+                    <input type="text" id="messageInput" placeholder="Enter a message">
+                    <button id="sendMessage" class="btn">Send Message</button>
+                </div>
+                <div id="echoResponse" class="data-display"></div>
+            </section>
+
+            <section class="features">
+                <h2>Features Implemented</h2>
+                <ul>
+                    <li>✅ Express.js HTTP Server on port 3000</li>
+                    <li>✅ Static file serving (HTML, CSS, JS)</li>
+                    <li>✅ API endpoint for server information</li>
+                    <li>✅ Custom HTTP headers</li>
+                    <li>✅ Error handling (404, 500)</li>
+                    <li>✅ AJAX requests from client</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Lab 01 - Advanced Web Application Development</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
