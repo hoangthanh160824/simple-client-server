@@ -3,7 +3,7 @@ const path = require('path');
 const os = require('os');
 
 const app = express();
-const PORT = 5000;
+const PORT = 3000;
 
 app.use(express.static('public'));
 app.use(express.json());
