@@ -3,7 +3,7 @@ const path = require('path');
 const os = require('os');
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -27,12 +27,6 @@ app.get('/api/server-info', (req, res) => {
   res.json(serverInfo);
 });
 
-app.get('/api/name', (req, res) => {
-  res.json({
-    name: 'Trần Minh Hiếu',
-    timestamp: new Date().toISOString()
-  });
-});
 
 app.post('/api/echo', (req, res) => {
   res.json({

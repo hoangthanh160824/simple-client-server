@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const fetchInfoBtn = document.getElementById('fetchInfo');
-    const fetchNameBtn = document.getElementById('fetchName');
     const sendMessageBtn = document.getElementById('sendMessage');
     const messageInput = document.getElementById('messageInput');
     const serverDataDiv = document.getElementById('serverData');
-    const nameDataDiv = document.getElementById('nameData');
     const echoResponseDiv = document.getElementById('echoResponse');
 
     function makeAjaxRequest(url, options = {}) {
@@ -61,24 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 
-    fetchNameBtn.addEventListener('click', function() {
-        const originalText = this.textContent;
-        setLoading(this, true);
-
-        makeAjaxRequest('/api/name')
-            .then(data => {
-                displayData(nameDataDiv, data);
-                console.log('Name info received:', data);
-            })
-            .catch(error => {
-                displayData(nameDataDiv, { error: error.message }, true);
-                console.error('Error fetching name info:', error);
-            })
-            .finally(() => {
-                setLoading(this, false);
-                this.textContent = originalText;
-            });
-    });
 
     sendMessageBtn.addEventListener('click', function() {
         const message = messageInput.value.trim();

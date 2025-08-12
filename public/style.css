@@ -1,186 +1,103 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
+    margin: 20px;
+    background-color: #f9f9f9;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
     background: white;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 20px;
+    border: 1px solid #ddd;
 }
 
 header {
     text-align: center;
-    margin-bottom: 40px;
-    padding: 20px 0;
-    border-bottom: 3px solid #667eea;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
 }
 
-header h1 {
+h1 {
     color: #333;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-header p {
-    color: #666;
-    font-size: 1.1rem;
-}
-
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
+h2 {
+    color: #555;
+    margin-bottom: 15px;
 }
 
 section {
-    background: #f8f9fa;
-    padding: 25px;
-    border-radius: 8px;
-    border-left: 4px solid #667eea;
-}
-
-section h2 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 1.4rem;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #f8f8f8;
 }
 
 .btn {
-    background: #667eea;
+    background: #007cba;
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    margin: 5px;
+    margin: 5px 5px 5px 0;
 }
 
 .btn:hover {
-    background: #5a67d8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-}
-
-.btn:active {
-    transform: translateY(0);
+    background: #005a87;
 }
 
 .form-group {
-    display: flex;
-    gap: 10px;
     margin-bottom: 15px;
-    flex-wrap: wrap;
 }
 
 input[type="text"] {
-    flex: 1;
-    min-width: 200px;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-input[type="text"]:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    padding: 8px;
+    border: 1px solid #ddd;
+    width: 200px;
+    margin-right: 10px;
 }
 
 .data-display {
     background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 15px;
-    min-height: 60px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: monospace;
     white-space: pre-wrap;
-    overflow-x: auto;
-}
-
-.data-display:empty::before {
-    content: "No data to display";
-    color: #999;
-    font-style: italic;
+    min-height: 50px;
 }
 
 .features ul {
-    list-style: none;
+    list-style-type: none;
+    padding: 0;
 }
 
 .features li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.features li:last-child {
-    border-bottom: none;
+    padding: 5px 0;
 }
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #eee;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
     color: #666;
-    margin-top: 40px;
 }
 
 .loading {
-    opacity: 0.6;
-    pointer-events: none;
+    opacity: 0.5;
 }
 
 .error {
-    color: #e53e3e;
-    background: #fed7d7;
-    border-color: #e53e3e;
+    color: red;
+    background: #ffe6e6;
 }
 
 .success {
-    color: #38a169;
-    background: #c6f6d5;
-    border-color: #38a169;
-}
-
-@media (max-width: 768px) {
-    .container {
-        margin: 10px;
-        padding: 15px;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    main {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .form-group {
-        flex-direction: column;
-    }
-    
-    input[type="text"] {
-        min-width: auto;
-    }
+    color: green;
+    background: #e6ffe6;
 }
